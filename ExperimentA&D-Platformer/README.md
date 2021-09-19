@@ -56,7 +56,7 @@ There are several game objects in this game which are described as follows:
 
 
 ## Game Rules
-The following set of requirements and rules where manually created by the authors to serve the purpose of the study.
+The following set of requirements and rules were manually created by the authors to serve the purpose of the study, where rules were constructed using the proposed CPN-MCL rules scheme.
 
 |Index| Requirement | Rule |
 |:---:|:-----------:|:----:|
