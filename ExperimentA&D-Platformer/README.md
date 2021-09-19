@@ -56,6 +56,7 @@ There are several game objects in this game which are described as follows:
 
 
 ## Game Rules
+The following set of requirements and rules where manually created by the authors to serve the purpose of the study.
 
 |Index| Requirement | Rule |
 |:---:|:-----------:|:----:|
