@@ -99,6 +99,68 @@ faulty states randomly (without using GA) and our RA. The first sub experiment u
 uses large ranges of values. Each sub experiment was conducted ten times. This experiment is meant to check if there is any difference between using BSGA with RA 
 and using random generation with RA.
 
+## Places Ranges Used
+
+### Small Ranges
+|          Place         |            Value Ranges           |
+|:----------------------:|:---------------------------------:|
+|      enemy0Health      |              [-2, 4]              |
+|     enemy0Position     | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|   collisionEnterEnemy  |               [0, 5]              |
+|     healthWithEnemy    |              [-6, 6]              |
+|      enemyChecked      |              [-6, 6]              |
+|     skeletonHealth     |              [-2, 4]              |
+|    skeletonPosition    | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+| collisionEnterSkeleton |               [0, 5]              |
+|   healthWithSkeleton   |              [-6, 6]              |
+|     skeletonChecked    |              [-6, 6]              |
+|        fireBalls       |              [-2, 2]              |
+|     fireballChecked    |              [-2, 4]              |
+|  fireballPotionChecked |              [-2, 2]              |
+|    fireballPosition    | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|  laserEyesEndPosition  | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|        teleports       |              [-2, 7]              |
+|     teleportChecked    |              [-2, 7]              |
+|          jumps         |              [-1, 3]              |
+|      tilesChecked      |              [-1, 3]              |
+|     playerPosition     | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|         health         |              [-6, 6]              |
+|        healCount       |              [-6, 6]              |
+|      healthChecked     |              [-6, 6]              |
+|    bigDamageChecked    |              [-6, 6]              |
+|    healthWithDamage    |              [-6, 6]              |
+
+### Large Ranges
+|          Place         |            Value Ranges           |
+|:----------------------:|:---------------------------------:|
+|      enemy0Health      |              [-2, 4]              |
+|     enemy0Position     | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|   collisionEnterEnemy  |               [0, 5]              |
+|     healthWithEnemy    |           [-1000, 1000]           |
+|      enemyChecked      |           [-1000, 1000]           |
+|     skeletonHealth     |              [-2, 4]              |
+|    skeletonPosition    | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+| collisionEnterSkeleton |               [0, 5]              |
+|   healthWithSkeleton   |           [-1000, 1000]           |
+|     skeletonChecked    |            [-1000, 1000           |
+|        fireBalls       |              [-2, 2]              |
+|     fireballChecked    |              [-2, 4]              |
+|  fireballPotionChecked |              [-2, 2]              |
+|    fireballPosition    | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|  laserEyesEndPosition  | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|        teleports       |              [-2, 7]              |
+|     teleportChecked    |              [-2, 7]              |
+|          jumps         |              [-1, 3]              |
+|      tilesChecked      |              [-1, 3]              |
+|     playerPosition     | x: [-16.0, 16.0],  y: [-2.0, 6.0] |
+|         health         |           [-1000, 1000]           |
+|        healCount       |           [-1000, 1000]           |
+|      healthChecked     |           [-1000, 1000]           |
+|    bigDamageChecked    |           [-1000, 1000]           |
+|    healthWithDamage    |           [-1000, 1000]           |
+
+
+
 ## Examples of Found Bugs
 The following are two examples of found bugs by our approach. The test scenarios of those bugs were applied on the game manually by the authors.
 
