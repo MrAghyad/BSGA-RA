@@ -100,7 +100,11 @@ uses large ranges of values. Each sub experiment was conducted ten times. This e
 and using random generation with RA.
 
 ## Examples of Found Bugs
+### Jumping Infinitely
+This bug violates Rule 1, where the player can jump infinite number of times neglecting the maximum number of consequent jumps while not on the ground.
+![alt text](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentA&D-Platformer/platformer_infiniteJump.gif?raw=true)
 
-
-
+### Invalid State / Level Design Issue - Stuck between tiles 
+This bug violates Rule 15, where the player gets stuck in the tiles positions when teleporting to the (x,y) coordinates of the tiles.
+![alt text](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentA&D-Platformer/platformer_stuckInTiles.gif?raw=true)
 
