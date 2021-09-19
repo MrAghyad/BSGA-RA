@@ -100,6 +100,8 @@ uses large ranges of values. Each sub experiment was conducted ten times. This e
 and using random generation with RA.
 
 ## Examples of Found Bugs
+The following are two examples of found bugs by our approach. The test scenarios of those bugs were applied on the game manually by the authors.
+
 ### Jumping Infinitely
 This bug violates Rule 1, where the player can jump infinite number of times neglecting the maximum number of consequent jumps while not on the ground.
 ![alt text](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentA&D-Platformer/platformer_infiniteJump.gif?raw=true)
