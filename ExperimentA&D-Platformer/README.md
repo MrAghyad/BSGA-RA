@@ -1,5 +1,6 @@
 # Platformer Game
-This game is an open-source 2D platformer game, where the player can walk, jump, collect items, teleport, and fire fireballs. 
+
+This game is an [open-source 2D platformer game](https://github.com/MitchellSturba/The-Magic-Hat), where the player can walk, jump, collect items, teleport, and fire fireballs. 
 Moreover, the game contains enemies that are spawned at different spawn points each time the game is loaded. 
 The goal of the game is to find the hat of the player, which is located somewhere in the game's level.
 The locations of collectibles in the game is predefined. However, enemies' positions are randomly selected based on a predefined set of positions that 
