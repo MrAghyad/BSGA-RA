@@ -1,0 +1,493 @@
+--- Reading Rules ---
+[[[['@enemyChecked', '==', '@health'], 'and', ['not', [['@enemy_0', '==', '@player_0'], 'and', ['@enemy_1', '==', '@player_1']]], 'and', ['not', ['@collisionEnterEnemy', '>=', '1']]], 'or', [['@enemyChecked', '==', '@health'], 'and', [['@enemy_0', '==', '@player_0'], 'and', ['@enemy_1', '==', '@player_1']], 'and', ['@collisionEnterEnemy', '>=', '1']]]]
+['(', '(', '(', '@enemyChecked', '==', '@health', ')', 'and', '(', 'not', '(', '(', '@enemy_0', '==', '@player_0', ')', 'and', '(', '@enemy_1', '==', '@player_1', ')', ')', ')', 'and', '(', 'not', '(', '@collisionEnterEnemy', '>=', '1', ')', ')', ')', 'or', '(', '(', '@enemyChecked', '==', '@health', ')', 'and', '(', '(', '@enemy_0', '==', '@player_0', ')', 'and', '(', '@enemy_1', '==', '@player_1', ')', ')', 'and', '(', '@collisionEnterEnemy', '>=', '1', ')', ')', ')']
+['or', 'and', 'and', '>=', '@collisionEnterEnemy', '1', 'and', '==', '@enemy_1', '@player_1', '==', '@enemy_0', '@player_0', '==', '@enemyChecked', '@health', 'and', 'and', 'not', '>=', '@collisionEnterEnemy', '1', 'not', 'and', '==', '@enemy_1', '@player_1', '==', '@enemy_0', '@player_0', '==', '@enemyChecked', '@health']
+======================
+[[['@player_1', '<=', '4'], 'and', ['@player_1', '>=', '-1']]]
+['(', '(', '@player_1', '<=', '4', ')', 'and', '(', '@player_1', '>=', '-1', ')', ')']
+['and', '>=', '@player_1', '-1', '<=', '@player_1', '4']
+======================
+[[['@jumpForce', '>=', '0'], 'and', ['@jumpForce', '<=', '3']]]
+['(', '(', '@jumpForce', '>=', '0', ')', 'and', '(', '@jumpForce', '<=', '3', ')', ')']
+['and', '<=', '@jumpForce', '3', '>=', '@jumpForce', '0']
+======================
+[[[['@stamina', '>=', '10'], 'and', [['@jumpForce', '>=', '0'], 'and', ['@jumpForce', '<=', '3']]], 'or', [['@stamina', '<', '10'], 'and', [['@jumpForce', '>=', '0'], 'and', ['@jumpForce', '<=', '1.5']]]]]
+['(', '(', '(', '@stamina', '>=', '10', ')', 'and', '(', '(', '@jumpForce', '>=', '0', ')', 'and', '(', '@jumpForce', '<=', '3', ')', ')', ')', 'or', '(', '(', '@stamina', '<', '10', ')', 'and', '(', '(', '@jumpForce', '>=', '0', ')', 'and', '(', '@jumpForce', '<=', '1.5', ')', ')', ')', ')']
+['or', 'and', 'and', '<=', '@jumpForce', '1.5', '>=', '@jumpForce', '0', '<', '@stamina', '10', 'and', 'and', '<=', '@jumpForce', '3', '>=', '@jumpForce', '0', '>=', '@stamina', '10']
+======================
+FILTERED Places (to get PlacesPerRule)
+[['@player_1', 'player', '1', 'Global'], ['@health', 'health', -1, 'Global'], ['@enemy_0', 'enemy', '0', 'Global'], ['@enemy_1', 'enemy', '1', 'Global'], ['@player_0', 'player', '0', 'Global'], ['@enemyChecked', 'enemyChecked', -1, 'Global'], ['@collisionEnterEnemy', 'collisionEnterEnemy', -1, 'Global'], ['@jumpForce', 'jumpForce', -1, 'Global'], ['@stamina', 'stamina', -1, 'Global']]
+{'health': ['Global', 'int', ['@health']], 'enemy': ['Global', 'tuple', ['@enemy_0', '@enemy_1']], 'player': ['Global', 'tuple', ['@player_0', '@player_1']], 'collisionEnterEnemy': ['Global', 'int', ['@collisionEnterEnemy']], 'jumpForce': ['Global', 'float', ['@jumpForce']], 'enemyChecked': ['Global', 'int', ['@enemyChecked']], 'stamina': ['Global', 'int', ['@stamina']]}
+[['health', 'enemy', 'player', 'collisionEnterEnemy', 'enemyChecked'], ['player'], ['jumpForce'], ['stamina', 'jumpForce']]
+======================
+([('player', (17.0, 5.0))], [1], 0)
+([('health', 1), ('enemy', (13.0, 2.0)), ('player', (15.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', -4)], [0], 0)
+([('stamina', 20), ('jumpForce', 4)], [3], 5)
+([('stamina', 21), ('jumpForce', 4)], [3], 2)
+([('health', 1), ('enemy', (9.0, 1.0)), ('player', (5.0, 3.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 4)], [0], 0)
+([('stamina', 4), ('jumpForce', 2)], [3], 4)
+([('jumpForce', 4)], [2], 0)
+([('stamina', 0), ('jumpForce', 2)], [3], 1)
+([('stamina', 21), ('jumpForce', 4)], [3], 2)
+([('jumpForce', 4)], [2], 20)
+([('stamina', 20), ('jumpForce', 4)], [3], 3)
+([('stamina', 1), ('jumpForce', 2)], [3], 6)
+([('jumpForce', 4)], [2], 11)
+([('stamina', 1), ('jumpForce', 4)], [3], 2)
+([('player', (-1.0, -2.0))], [1], 5)
+([('player', (-4.0, -2.0))], [1], 5)
+([('player', (-1.0, 5.0))], [1], 3)
+([('jumpForce', 4)], [2], 1)
+([('stamina', 6), ('jumpForce', 2)], [3], 1)
+([('stamina', 9), ('jumpForce', 2)], [3], 1)
+([('stamina', 5), ('jumpForce', 4)], [3], 3)
+([('jumpForce', 4)], [2], 3)
+([('health', 1), ('enemy', (4.0, 3.0)), ('player', (5.0, 0.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2)], [0], 0)
+([('jumpForce', 4)], [2], 9)
+([('stamina', 3), ('jumpForce', 3)], [3], 1)
+-- Bug Generation 0 --
+([('stamina', 20), ('jumpForce', 4)], [3], 55.84561896324158)
+([('health', 1), ('enemy', (9.0, 1.0)), ('player', (5.0, 3.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 4)], [0], 60.41842293739319)
+([('player', (17.0, 5.0))], [1], 62.128814697265625)
+([('stamina', 21), ('jumpForce', 4)], [3], 67.09456539154053)
+([('stamina', 4), ('jumpForce', 2)], [3], 71.88276314735413)
+([('health', 1), ('enemy', (13.0, 2.0)), ('player', (15.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', -4)], [0], 71.43695521354675)
+([('jumpForce', 4)], [2], 51.33271861076355)
+([('stamina', 20), ('jumpForce', 4)], [3], 59.04609274864197)
+([('stamina', 21), ('jumpForce', 4)], [3], 61.87552452087402)
+([('stamina', 0), ('jumpForce', 2)], [3], 62.42405867576599)
+([('jumpForce', 4)], [2], 62.4230592250824)
+([('stamina', 1), ('jumpForce', 2)], [3], 67.52840662002563)
+([('player', (-1.0, -2.0))], [1], 9.903512001037598)
+===========================
+FOUND
+([('player', (-1.0, -2.0))], (9.903512001037598, 8))
+[1]
+===========================
+([('player', (-1.0, 5.0))], [1], 6.224355697631836)
+===========================
+FOUND
+([('player', (-1.0, 5.0))], (6.224355697631836, 0))
+[1]
+===========================
+([('player', (-4.0, -2.0))], [1], 7.401206970214844)
+===========================
+FOUND
+([('player', (-4.0, -2.0))], (7.401206970214844, 5))
+[1]
+===========================
+([('jumpForce', 4)], [2], 59.792097091674805)
+([('jumpForce', 4)], [2], 64.3798258304596)
+([('stamina', 6), ('jumpForce', 2)], [3], 64.98520827293396)
+([('stamina', 1), ('jumpForce', 4)], [3], 67.18532490730286)
+([('stamina', 5), ('jumpForce', 4)], [3], 64.77377438545227)
+([('stamina', 9), ('jumpForce', 2)], [3], 63.94598889350891)
+([('health', 1), ('enemy', (4.0, 3.0)), ('player', (5.0, 0.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2)], [0], 64.51147675514221)
+([('jumpForce', 4)], [2], 64.34392547607422)
+([('stamina', 3), ('jumpForce', 3)], [3], 66.02243399620056)
+([('jumpForce', 4)], [2], 48.24100065231323)
+-- Bug Generation 1 --
+----CROSS----
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 28}, [2])
+({'health': 2, 'enemy': (8.0, 2.0), 'player': (-1.0, -2.0), 'collisionEnterEnemy': 0, 'jumpForce': 0, 'enemyChecked': 5, 'stamina': 11}, [1])
+# Child 1
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (-1.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 28}, [0, 1, 2, 3])
+# Child 2
+({'health': 2, 'enemy': (8.0, 2.0), 'player': (-1.0, -2.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 11}, [0, 1, 2, 3])
+----CROSS----
+({'health': 2, 'enemy': (11.0, 2.0), 'player': (14.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 3, 'enemyChecked': 0, 'stamina': 3}, [3])
+({'health': 4, 'enemy': (19.0, 2.0), 'player': (4.0, 5.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 21}, [3])
+# Child 1
+({'health': 2, 'enemy': (11.0, 2.0), 'player': (14.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 0, 'stamina': 21}, [0, 2, 3])
+# Child 2
+({'health': 4, 'enemy': (19.0, 2.0), 'player': (4.0, 5.0), 'collisionEnterEnemy': 4, 'jumpForce': 3, 'enemyChecked': -6, 'stamina': 3}, [0, 1, 3])
+----CROSS----
+({'health': 3, 'enemy': (6.0, 3.0), 'player': (0.0, 4.0), 'collisionEnterEnemy': 4, 'jumpForce': 2, 'enemyChecked': -6, 'stamina': 4}, [3])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 7}, [2])
+# Child 1
+({'health': 3, 'enemy': (6.0, 3.0), 'player': (0.0, 4.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 4}, [0, 2, 3])
+# Child 2
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 4}, [0, 3])
+----CROSS----
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0])
+({'health': -2, 'enemy': (9.0, 1.0), 'player': (-4.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 0, 'enemyChecked': 2, 'stamina': 21}, [1])
+# Child 1
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (-4.0, -2.0), 'collisionEnterEnemy': 4, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0, 1])
+# Child 2
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 0, 'enemyChecked': 2, 'stamina': 21}, [0])
+----CROSS----
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 9}, [3])
+({'health': 3, 'enemy': (12.0, 3.0), 'player': (-1.0, 0.0), 'collisionEnterEnemy': 1, 'jumpForce': 2, 'enemyChecked': -4, 'stamina': 1}, [3])
+# Child 1
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 1}, [0, 1, 3])
+# Child 2
+({'health': 3, 'enemy': (12.0, 3.0), 'player': (-1.0, 0.0), 'collisionEnterEnemy': 1, 'jumpForce': 2, 'enemyChecked': -4, 'stamina': 9}, [0, 3])
+----CROSS----
+({'health': -1, 'enemy': (16.0, 3.0), 'player': (5.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [3])
+({'health': -3, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -2, 'stamina': 24}, [2])
+# Child 1
+({'health': -1, 'enemy': (16.0, 3.0), 'player': (5.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [0, 1, 2, 3])
+# Child 2
+({'health': -3, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -2, 'stamina': 5}, [0, 2, 3])
+----CROSS----
+({'health': 3, 'enemy': (12.0, 3.0), 'player': (-1.0, 0.0), 'collisionEnterEnemy': 1, 'jumpForce': 2, 'enemyChecked': -4, 'stamina': 1}, [3])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 7}, [2])
+# Child 1
+({'health': 3, 'enemy': (12.0, 3.0), 'player': (-1.0, 0.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 1}, [0, 2, 3])
+# Child 2
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+----CROSS----
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 7}, [2])
+({'health': 3, 'enemy': (6.0, 2.0), 'player': (4.0, 3.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': 1, 'stamina': 0}, [3])
+# Child 1
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 0}, [0, 3])
+# Child 2
+({'health': 3, 'enemy': (6.0, 2.0), 'player': (4.0, 3.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': 1, 'stamina': 0}, [0, 2, 3])
+----CROSS----
+({'health': 3, 'enemy': (12.0, 3.0), 'player': (-1.0, 0.0), 'collisionEnterEnemy': 1, 'jumpForce': 2, 'enemyChecked': -4, 'stamina': 1}, [3])
+({'health': -4, 'enemy': (15.0, 3.0), 'player': (-1.0, 5.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': -1, 'stamina': 13}, [1])
+# Child 1
+({'health': 3, 'enemy': (12.0, 3.0), 'player': (-1.0, 5.0), 'collisionEnterEnemy': 1, 'jumpForce': 2, 'enemyChecked': -4, 'stamina': 1}, [0, 1, 3])
+# Child 2
+({'health': -4, 'enemy': (15.0, 3.0), 'player': (-1.0, 5.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': -1, 'stamina': 1}, [0, 1, 3])
+----CROSS----
+({'health': 3, 'enemy': (12.0, 0.0), 'player': (-2.0, -1.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 3, 'stamina': 20}, [3])
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 28}, [2])
+# Child 1
+({'health': 3, 'enemy': (12.0, 0.0), 'player': (-2.0, -1.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 3, 'stamina': 20}, [2, 3])
+# Child 2
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 20}, [0, 1, 2, 3])
+({'health': 4, 'enemy': (19.0, 2.0), 'player': (4.0, 5.0), 'collisionEnterEnemy': 4, 'jumpForce': 3, 'enemyChecked': -6, 'stamina': 3}, [0, 1, 3])
+random rule 3
+found :{'stamina': 0, 'jumpForce': 3.0}
+--updated from statesReached--
+------Mutated------
+({'health': 4, 'enemy': (19.0, 2.0), 'player': (4.0, 5.0), 'collisionEnterEnemy': 4, 'jumpForce': 3.0, 'enemyChecked': -6, 'stamina': 0}, [3])
+({'health': -3, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -2, 'stamina': 5}, [0, 2, 3])
+random rule 0
+------Mutated------
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 5}, [0])
+({'health': -4, 'enemy': (15.0, 3.0), 'player': (-1.0, 5.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': -1, 'stamina': 13}, [0, 1])
+random rule 3
+------Mutated------
+({'health': -4, 'enemy': (15.0, 3.0), 'player': (-1.0, 5.0), 'collisionEnterEnemy': 2, 'jumpForce': 3, 'enemyChecked': -1, 'stamina': 9}, [3])
+({'health': -4, 'enemy': (15.0, 3.0), 'player': (-1.0, 5.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': -1, 'stamina': 1}, [0, 1, 3])
+random rule 3
+------Mutated------
+({'health': -4, 'enemy': (15.0, 3.0), 'player': (-1.0, 5.0), 'collisionEnterEnemy': 2, 'jumpForce': 4.5, 'enemyChecked': -1, 'stamina': 20}, [3])
+({'health': 1, 'enemy': (19.0, 0.0), 'player': (12.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 20}, [0, 2, 3])
+random rule 2
+------Mutated------
+({'health': 1, 'enemy': (19.0, 0.0), 'player': (12.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 20}, [2])
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 20}, [0, 1, 2, 3])
+random rule 2
+found :{'stamina': 20, 'jumpForce': 4.5}
+--updated from statesReached--
+------Mutated------
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4.5, 'enemyChecked': -4, 'stamina': 20}, [2])
+({'health': -2, 'enemy': (9.0, 1.0), 'player': (-4.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 0, 'enemyChecked': 2, 'stamina': 21}, [0, 1])
+random rule 2
+------Mutated------
+({'health': -2, 'enemy': (9.0, 1.0), 'player': (-4.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 21}, [2])
+([('player', (-1.0, -2.0)), ('health', 2), ('enemy', (13.0, 3.0)), ('collisionEnterEnemy', 1), ('enemyChecked', -4), ('jumpForce', 4), ('stamina', 28)], [1, 0, 2, 3], 65.55368995666504)
+([('jumpForce', 4), ('stamina', 11), ('player', (-1.0, -2.0)), ('health', 2), ('enemy', (8.0, 2.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 5)], [2, 3, 1, 0], 71.91667222976685)
+===========================
+FOUND
+([('jumpForce', 4), ('stamina', 11), ('player', (-1.0, -2.0)), ('health', 2), ('enemy', (8.0, 2.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 5)], (71.91667222976685, 70))
+[1]
+===========================
+([('health', 2), ('enemy', (11.0, 2.0)), ('player', (14.0, -1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 0), ('jumpForce', 4), ('stamina', 21)], [0, 2, 3], 73.08056139945984)
+([('stamina', 0), ('jumpForce', 3.0)], [3], 10.204710245132446)
+===========================
+FOUND
+([('stamina', 0), ('jumpForce', 3.0)], (10.204710245132446, 11))
+[3]
+===========================
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('stamina', 4), ('jumpForce', 2)], [0, 3], 68.15373730659485)
+([('health', 3), ('enemy', (6.0, 3.0)), ('player', (0.0, 4.0)), ('collisionEnterEnemy', 4), ('enemyChecked', -6), ('jumpForce', 4), ('stamina', 4)], [0, 2, 3], 70.88642764091492)
+([('health', 1), ('enemy', (4.0, 3.0)), ('player', (-4.0, -2.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2)], [0, 1], 69.78936243057251)
+([('health', 1), ('enemy', (4.0, 3.0)), ('player', (5.0, 0.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2)], [0], 65.140793800354)
+([('health', 3), ('enemy', (12.0, 3.0)), ('player', (-1.0, 0.0)), ('collisionEnterEnemy', 1), ('enemyChecked', -4), ('stamina', 9), ('jumpForce', 2)], [0, 3], 70.08457326889038)
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 1), ('jumpForce', 2)], [0, 1, 3], 72.1281065940857)
+===========================
+FOUND
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 1), ('jumpForce', 2)], (72.1281065940857, 70))
+[1]
+===========================
+([('jumpForce', 4), ('player', (5.0, -2.0)), ('stamina', 5)], [2, 1, 3], 71.57359075546265)
+([('health', 4), ('enemy', (17.0, 3.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 1), ('enemyChecked', 5)], [0], 64.27909827232361)
+([('stamina', 9), ('jumpForce', 3)], [3], 64.75283026695251)
+([('health', 3), ('enemy', (12.0, 3.0)), ('player', (-1.0, 0.0)), ('collisionEnterEnemy', 1), ('enemyChecked', -4), ('jumpForce', 4), ('stamina', 1)], [0, 2, 3], 68.27241921424866)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('stamina', 1), ('jumpForce', 2)], [0, 3], 71.40703415870667)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('stamina', 0), ('jumpForce', 2)], [0, 3], 72.27072596549988)
+([('stamina', 20), ('jumpForce', 4.5)], [3], 7.398214340209961)
+===========================
+FOUND
+([('stamina', 20), ('jumpForce', 4.5)], (7.398214340209961, 0))
+[3]
+===========================
+([('health', 3), ('enemy', (6.0, 2.0)), ('player', (4.0, 3.0)), ('collisionEnterEnemy', 2), ('enemyChecked', 1), ('jumpForce', 4), ('stamina', 0)], [0, 2, 3], 70.20724606513977)
+([('health', 3), ('enemy', (12.0, 3.0)), ('player', (-1.0, 5.0)), ('collisionEnterEnemy', 1), ('enemyChecked', -4), ('stamina', 1), ('jumpForce', 2)], [0, 1, 3], 70.41469049453735)
+([('jumpForce', 4)], [2], 62.66341948509216)
+([('jumpForce', 4.5)], [2], 5.02755331993103)
+===========================
+FOUND
+([('jumpForce', 4.5)], (5.02755331993103, 0))
+[2]
+===========================
+([('jumpForce', 4), ('stamina', 20)], [2, 3], 46.445791244506836)
+([('jumpForce', 4)], [2], 43.9899845123291)
+-- Bug Generation 2 --
+----CROSS----
+({'health': 1, 'enemy': (19.0, 0.0), 'player': (12.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 20}, [2])
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4.5, 'enemyChecked': -4, 'stamina': 20}, [2])
+# Child 1
+({'health': 1, 'enemy': (19.0, 0.0), 'player': (12.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4.5, 'enemyChecked': -6, 'stamina': 20}, [0, 2, 3])
+# Child 2
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 20}, [0, 1, 2, 3])
+----CROSS----
+({'health': 1, 'enemy': (19.0, 0.0), 'player': (12.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 20}, [2])
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 5}, [0])
+# Child 1
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 20}, [0, 2, 3])
+# Child 2
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 5}, [0, 2, 3])
+----CROSS----
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 0}, [0, 3])
+({'health': 3, 'enemy': (12.0, 0.0), 'player': (-2.0, -1.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 3, 'stamina': 20}, [2, 3])
+# Child 1
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 0}, [0, 2, 3])
+# Child 2
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 20}, [0, 2, 3])
+----CROSS----
+({'health': -1, 'enemy': (16.0, 3.0), 'player': (5.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [2, 1, 3])
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 0, 'enemyChecked': 2, 'stamina': 21}, [0])
+# Child 1
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 5}, [0, 2, 3])
+# Child 2
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 21}, [0, 2, 3])
+----CROSS----
+({'health': -1, 'enemy': (16.0, 3.0), 'player': (5.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [2, 1, 3])
+({'health': 3, 'enemy': (6.0, 3.0), 'player': (0.0, 4.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 4}, [0, 2, 3])
+# Child 1
+({'health': 3, 'enemy': (6.0, 3.0), 'player': (0.0, 4.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [0, 2, 3])
+# Child 2
+({'health': 3, 'enemy': (6.0, 3.0), 'player': (0.0, 4.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 4}, [0, 2, 3])
+----CROSS----
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4.5, 'enemyChecked': -4, 'stamina': 20}, [2])
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 5}, [0])
+# Child 1
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4.5, 'enemyChecked': 5, 'stamina': 20}, [0, 2, 3])
+# Child 2
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4.5, 'enemyChecked': 5, 'stamina': 5}, [0, 2, 3])
+----CROSS----
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 1}, [1])
+({'health': 3, 'enemy': (6.0, 2.0), 'player': (4.0, 3.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': 1, 'stamina': 0}, [0, 2, 3])
+# Child 1
+({'health': 3, 'enemy': (6.0, 2.0), 'player': (4.0, 3.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': 1, 'stamina': 1}, [0, 3])
+# Child 2
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 0, 'stamina': 0}, [0, 1, 2, 3])
+----CROSS----
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 1}, [1])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 4}, [0, 3])
+# Child 1
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+# Child 2
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [0, 1, 3])
+({'health': 2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': -4, 'stamina': 20}, [0, 1, 2, 3])
+random rule 0
+------Mutated------
+({'health': -2, 'enemy': (13.0, 3.0), 'player': (11.0, -2.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 20}, [0])
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 5}, [0, 2, 3])
+random rule 2
+------Mutated------
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 5}, [2])
+({'health': 3, 'enemy': (6.0, 3.0), 'player': (0.0, 4.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [0, 2, 3])
+random rule 0
+------Mutated------
+({'health': 3, 'enemy': (6.0, 3.0), 'player': (-7.0, -6.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [0])
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 1, 'jumpForce': 4.5, 'enemyChecked': 5, 'stamina': 20}, [0, 2, 3])
+random rule 0
+------Mutated------
+({'health': 4, 'enemy': (17.0, 3.0), 'player': (-2.0, -11.0), 'collisionEnterEnemy': 3, 'jumpForce': 4.5, 'enemyChecked': 1, 'stamina': 20}, [0])
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 0, 'stamina': 0}, [0, 1, 2, 3])
+random rule 0
+------Mutated------
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 0, 'stamina': 0}, [0])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+random rule 0
+------Mutated------
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0])
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (-4.0, -2.0), 'collisionEnterEnemy': 4, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0, 1])
+random rule 0
+------Mutated------
+({'health': 1, 'enemy': (14.0, 1.0), 'player': (1.0, -2.0), 'collisionEnterEnemy': 5, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0])
+({'health': 1, 'enemy': (19.0, 0.0), 'player': (12.0, -1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 20}, [0, 2, 3])
+random rule 0
+found :{'health': 3, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'enemyChecked': 2, 'stamina': 10, 'jumpForce': 0}
+--updated from statesReached--
+------Mutated------
+({'health': 3, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 20}, [0])
+({'health': -1, 'enemy': (16.0, 3.0), 'player': (5.0, -2.0), 'collisionEnterEnemy': 2, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [0, 1, 2, 3])
+random rule 0
+------Mutated------
+({'health': 3, 'enemy': (21.0, 1.0), 'player': (5.0, -2.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [0])
+([('health', -2), ('enemy', (13.0, 3.0)), ('player', (11.0, -2.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 5)], [0], 62.87285780906677)
+([('health', 1), ('enemy', (19.0, 0.0)), ('player', (12.0, -1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', -6), ('jumpForce', 4.5), ('stamina', 20)], [0, 2, 3], 65.12283968925476)
+===========================
+FOUND
+([('health', 1), ('enemy', (19.0, 0.0)), ('player', (12.0, -1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', -6), ('jumpForce', 4.5), ('stamina', 20)], (65.12283968925476, 70))
+[2, 3]
+===========================
+([('health', 4), ('enemy', (17.0, 3.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 1), ('enemyChecked', 5), ('jumpForce', 4), ('stamina', 20)], [0, 2, 3], 67.64409756660461)
+([('jumpForce', 4)], [2], 59.20666146278381)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('jumpForce', 4), ('stamina', 0)], [0, 2, 3], 69.12613439559937)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('jumpForce', 4), ('stamina', 20)], [0, 2, 3], 70.72884893417358)
+([('health', 1), ('enemy', (4.0, 3.0)), ('player', (5.0, 0.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2), ('jumpForce', 4), ('stamina', 5)], [0, 2, 3], 67.68798112869263)
+([('health', 3), ('enemy', (6.0, 3.0)), ('player', (-7.0, -6.0)), ('collisionEnterEnemy', 4), ('enemyChecked', -6)], [0], 68.57560706138611)
+([('health', 1), ('enemy', (4.0, 3.0)), ('player', (5.0, 0.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2), ('jumpForce', 4), ('stamina', 21)], [0, 2, 3], 71.97751140594482)
+([('health', 3), ('enemy', (6.0, 3.0)), ('player', (0.0, 4.0)), ('collisionEnterEnemy', 4), ('enemyChecked', -6), ('jumpForce', 4), ('stamina', 4)], [0, 2, 3], 71.48682236671448)
+([('health', 4), ('enemy', (17.0, 3.0)), ('player', (-2.0, -11.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 1)], [0], 64.24319434165955)
+([('health', 4), ('enemy', (17.0, 3.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 1), ('enemyChecked', 5), ('jumpForce', 4.5), ('stamina', 5)], [0, 2, 3], 74.47682666778564)
+===========================
+FOUND
+([('health', 4), ('enemy', (17.0, 3.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 1), ('enemyChecked', 5), ('jumpForce', 4.5), ('stamina', 5)], (74.47682666778564, 70))
+[2]
+===========================
+([('health', 3), ('enemy', (6.0, 2.0)), ('player', (4.0, 3.0)), ('collisionEnterEnemy', 2), ('enemyChecked', 1), ('stamina', 1), ('jumpForce', 2)], [0, 3], 74.08786702156067)
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0)], [0], 65.57363653182983)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 2), ('enemyChecked', 2)], [0], 65.89677214622498)
+([('health', 3), ('enemy', (2.0, 1.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2)], [0], 43.93849468231201)
+([('health', 1), ('enemy', (14.0, 1.0)), ('player', (1.0, -2.0)), ('collisionEnterEnemy', 5), ('enemyChecked', 2)], [0], 69.5998682975769)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('stamina', 1), ('jumpForce', 2)], [0, 3], 73.24312543869019)
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 4), ('jumpForce', 2)], [0, 1, 3], 59.70931839942932)
+===========================
+FOUND
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 4), ('jumpForce', 2)], (59.70931839942932, 70))
+[1]
+===========================
+([('health', 3), ('enemy', (21.0, 1.0)), ('player', (5.0, -2.0)), ('collisionEnterEnemy', 4), ('enemyChecked', -6)], [0], 44.728248596191406)
+-- Bug Generation 3 --
+----CROSS----
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 0}, [0, 2, 3])
+({'health': 3, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 20}, [0])
+# Child 1
+({'health': 3, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 0}, [0, 2, 3])
+# Child 2
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 20}, [0, 2, 3])
+----CROSS----
+({'health': 1, 'enemy': (14.0, 1.0), 'player': (1.0, -2.0), 'collisionEnterEnemy': 5, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0])
+({'health': 1, 'enemy': (14.0, 1.0), 'player': (1.0, -2.0), 'collisionEnterEnemy': 5, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0])
+# Child 1
+({'health': 1, 'enemy': (14.0, 1.0), 'player': (1.0, -2.0), 'collisionEnterEnemy': 5, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0, 1])
+# Child 2
+({'health': 1, 'enemy': (14.0, 1.0), 'player': (1.0, -2.0), 'collisionEnterEnemy': 5, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0, 1])
+----CROSS----
+({'health': 3, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 20}, [0])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+# Child 1
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 20}, [0, 2, 3])
+# Child 2
+({'health': 3, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+----CROSS----
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+# Child 1
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+# Child 2
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+----CROSS----
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [1])
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [1])
+# Child 1
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [0, 1, 3])
+# Child 2
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [0, 1, 3])
+----CROSS----
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [1])
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 21}, [0, 2, 3])
+# Child 1
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 4}, [0, 3])
+# Child 2
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 0, 'stamina': 21}, [0, 1, 2, 3])
+----CROSS----
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [1])
+# Child 1
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 1}, [0, 1, 3])
+# Child 2
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 4}, [0, 3])
+({'health': 1, 'enemy': (14.0, 1.0), 'player': (1.0, -2.0), 'collisionEnterEnemy': 5, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0, 1])
+random rule 0
+------Mutated------
+({'health': -5, 'enemy': (21.0, 1.0), 'player': (1.0, -2.0), 'collisionEnterEnemy': 5, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 24}, [0])
+({'health': 1, 'enemy': (4.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 21}, [0, 2, 3])
+random rule 0
+------Mutated------
+({'health': 1, 'enemy': (13.0, 3.0), 'player': (5.0, 0.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': 5, 'stamina': 21}, [0])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 2, 'stamina': 20}, [0, 2, 3])
+random rule 0
+found :{'health': 4, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'enemyChecked': 3}
+--updated from statesReached--
+------Mutated------
+({'health': 4, 'enemy': (2.0, 1.0), 'player': (2.0, 1.0), 'collisionEnterEnemy': 3, 'jumpForce': 4, 'enemyChecked': 3, 'stamina': 20}, [0])
+({'health': 0, 'enemy': (11.0, 1.0), 'player': (6.0, 0.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0, 3])
+random rule 0
+------Mutated------
+({'health': 5, 'enemy': (11.0, 3.0), 'player': (-8.0, -5.0), 'collisionEnterEnemy': 3, 'jumpForce': 2, 'enemyChecked': -3, 'stamina': 1}, [0])
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [0, 1, 3])
+random rule 0
+------Mutated------
+({'health': 4, 'enemy': (24.0, 1.0), 'player': (14.0, 0.0), 'collisionEnterEnemy': 0, 'jumpForce': 2, 'enemyChecked': 0, 'stamina': 4}, [0])
+({'health': 3, 'enemy': (6.0, 2.0), 'player': (4.0, 3.0), 'collisionEnterEnemy': 2, 'jumpForce': 2, 'enemyChecked': 1, 'stamina': 1}, [0, 3])
+random rule 0
+found :{'health': 3, 'enemy': (3.0, 1.0), 'player': (3.0, 1.0), 'collisionEnterEnemy': 4, 'enemyChecked': 2, 'stamina': 30, 'jumpForce': 0}
+--updated from statesReached--
+------Mutated------
+({'health': 3, 'enemy': (3.0, 1.0), 'player': (3.0, 1.0), 'collisionEnterEnemy': 4, 'jumpForce': 2, 'enemyChecked': 2, 'stamina': 1}, [0])
+({'health': 4, 'enemy': (5.0, 3.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 0, 'jumpForce': 4, 'enemyChecked': 0, 'stamina': 21}, [0, 1, 2, 3])
+random rule 0
+------Mutated------
+({'health': 4, 'enemy': (25.0, 1.0), 'player': (3.0, 5.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': 0, 'stamina': 21}, [0])
+({'health': 3, 'enemy': (21.0, 1.0), 'player': (5.0, -2.0), 'collisionEnterEnemy': 4, 'jumpForce': 4, 'enemyChecked': -6, 'stamina': 5}, [0, 1, 2, 3])
+random rule 0
+------Mutated------
+({'health': 3, 'enemy': (5.0, 2.0), 'player': (-1.0, 4.0), 'collisionEnterEnemy': 5, 'jumpForce': 4, 'enemyChecked': 3, 'stamina': 5}, [0])
+([('health', 1), ('enemy', (14.0, 1.0)), ('player', (1.0, -2.0)), ('collisionEnterEnemy', 5), ('enemyChecked', 2)], [0, 1], 66.53905391693115)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('jumpForce', 4), ('stamina', 20)], [0, 2, 3], 68.79801297187805)
+([('health', 3), ('enemy', (2.0, 1.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('jumpForce', 4), ('stamina', 0)], [0, 2, 3], 70.41369247436523)
+===========================
+FOUND
+([('health', 3), ('enemy', (2.0, 1.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('jumpForce', 4), ('stamina', 0)], (70.41369247436523, 70))
+[0]
+===========================
+([('health', 4), ('enemy', (2.0, 1.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 3)], [0], 30.241124629974365)
+===========================
+FOUND
+([('health', 4), ('enemy', (2.0, 1.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 3)], (30.241124629974365, 34))
+[0]
+===========================
+([('health', -5), ('enemy', (21.0, 1.0)), ('player', (1.0, -2.0)), ('collisionEnterEnemy', 5), ('enemyChecked', 2)], [0], 64.4107460975647)
+([('health', 1), ('enemy', (13.0, 3.0)), ('player', (5.0, 0.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 5)], [0], 66.22489523887634)
+([('health', 3), ('enemy', (2.0, 1.0)), ('player', (2.0, 1.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('stamina', 1), ('jumpForce', 2)], [0, 3], 70.93031024932861)
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('stamina', 1), ('jumpForce', 2)], [0, 3], 66.51811051368713)
+([('health', 5), ('enemy', (11.0, 3.0)), ('player', (-8.0, -5.0)), ('collisionEnterEnemy', 3), ('enemyChecked', -3)], [0], 63.23389291763306)
+([('health', 4), ('enemy', (24.0, 1.0)), ('player', (14.0, 0.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0)], [0], 64.80369520187378)
+([('health', 3), ('enemy', (3.0, 1.0)), ('player', (3.0, 1.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2)], [0], 67.22122883796692)
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 4), ('jumpForce', 2)], [0, 1, 3], 67.99616026878357)
+===========================
+FOUND
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 4), ('jumpForce', 2)], (67.99616026878357, 70))
+[1]
+===========================
+([('health', 1), ('enemy', (4.0, 3.0)), ('player', (5.0, 0.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 2), ('stamina', 4), ('jumpForce', 2)], [0, 3], 66.37250137329102)
+([('health', 4), ('enemy', (25.0, 1.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 4), ('enemyChecked', 0)], [0], 70.09753584861755)
+([('health', 3), ('enemy', (5.0, 2.0)), ('player', (-1.0, 4.0)), ('collisionEnterEnemy', 5), ('enemyChecked', 3)], [0], 70.59321212768555)
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 1), ('jumpForce', 2)], [0, 1, 3], 62.21960663795471)
+===========================
+FOUND
+([('health', 4), ('enemy', (5.0, 3.0)), ('player', (3.0, 5.0)), ('collisionEnterEnemy', 0), ('enemyChecked', 0), ('stamina', 1), ('jumpForce', 2)], (62.21960663795471, 70))
+[1]
+===========================
+([('health', 0), ('enemy', (11.0, 1.0)), ('player', (6.0, 0.0)), ('collisionEnterEnemy', 3), ('enemyChecked', 2), ('stamina', 4), ('jumpForce', 2)], [0, 3], 39.7018837928772)
+-- End of (successful) evolution --
