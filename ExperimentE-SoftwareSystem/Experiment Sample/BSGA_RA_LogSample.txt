@@ -1,0 +1,1438 @@
+--- Reading Rules ---
+[['not', [['@pressure', '>=', '4810'], 'and', ['@power', '>=', '2739'], 'and', ['@pdltrip', '==', '1']]]]
+['(', 'not', '(', '(', '@pressure', '>=', '4810', ')', 'and', '(', '@power', '>=', '2739', ')', 'and', '(', '@pdltrip', '==', '1', ')', ')', ')']
+['not', 'and', 'and', '==', '@pdltrip', '1', '>=', '@power', '2739', '>=', '@pressure', '4810']
+======================
+[['not', [['@pressure', '<=', '1287'], 'and', ['@power', '>=', '2739'], 'and', ['@pdltrip', '==', '1']]]]
+['(', 'not', '(', '(', '@pressure', '<=', '1287', ')', 'and', '(', '@power', '>=', '2739', ')', 'and', '(', '@pdltrip', '==', '1', ')', ')', ')']
+['not', 'and', 'and', '==', '@pdltrip', '1', '>=', '@power', '2739', '<=', '@pressure', '1287']
+======================
+FILTERED Places (to get PlacesPerRule)
+[['@pressure', 'pressure', -1, 'Global'], ['@pdltrip', 'pdltrip', -1, 'Global'], ['@power', 'power', -1, 'Global']]
+{'pressure': ['Global', 'int', ['@pressure']], 'pdltrip': ['Global', 'int', ['@pdltrip']], 'power': ['Global', 'int', ['@power']]}
+[['pressure', 'pdltrip', 'power'], ['pressure', 'pdltrip', 'power']]
+======================
+([('pressure', 4852), ('pdltrip', 1), ('power', 4826)], [0], 20)
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 23)
+([('pressure', 4907), ('pdltrip', 1), ('power', 3872)], [0], 5)
+([('pressure', 4850), ('pdltrip', 1), ('power', 4681)], [0], 19)
+([('pressure', 4844), ('pdltrip', 1), ('power', 4847)], [0], 148)
+([('pressure', 4856), ('pdltrip', 1), ('power', 3131)], [0], 102)
+([('pressure', 598), ('pdltrip', 1), ('power', 4582)], [1], 7)
+([('pressure', 1281), ('pdltrip', 1), ('power', 4635)], [1], 76)
+([('pressure', 4910), ('pdltrip', 1), ('power', 3996)], [0], 76)
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 6)
+([('pressure', 960), ('pdltrip', 1), ('power', 3879)], [1], 28)
+([('pressure', 4852), ('pdltrip', 1), ('power', 4062)], [0], 58)
+([('pressure', 450), ('pdltrip', 1), ('power', 4829)], [1], 13)
+([('pressure', 649), ('pdltrip', 1), ('power', 3885)], [1], 2)
+([('pressure', 54), ('pdltrip', 1), ('power', 4891)], [1], 12)
+-- Bug Generation 0 --
+([('pressure', 4907), ('pdltrip', 1), ('power', 3872)], [0], 10.014615297317505)
+places =3
+states =5000
+([('pressure', 4844), ('pdltrip', 1), ('power', 4847)], [0], 11.234652519226074)
+([('pressure', 4852), ('pdltrip', 1), ('power', 4826)], [0], 11.47734522819519)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4856), ('pdltrip', 1), ('power', 3131)], [0], 9.142045259475708)
+places =3
+states =5000
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 10.497206449508667)
+([('pressure', 4850), ('pdltrip', 1), ('power', 4681)], [0], 11.938660621643066)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 960), ('pdltrip', 1), ('power', 3879)], [1], 9.677594184875488)
+([('pressure', 598), ('pdltrip', 1), ('power', 4582)], [1], 11.567200899124146)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4910), ('pdltrip', 1), ('power', 3996)], [0], 12.171058893203735)
+places =3
+states =5000
+([('pressure', 4852), ('pdltrip', 1), ('power', 4062)], [0], 10.672919750213623)
+places =3
+states =5000
+([('pressure', 1281), ('pdltrip', 1), ('power', 4635)], [1], 12.218221426010132)
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 10.898990392684937)
+places =3
+states =5000
+([('pressure', 450), ('pdltrip', 1), ('power', 4829)], [1], 11.090009212493896)
+places =3
+states =5000
+([('pressure', 54), ('pdltrip', 1), ('power', 4891)], [1], 10.101053953170776)
+([('pressure', 649), ('pdltrip', 1), ('power', 3885)], [1], 9.262384176254272)
+-- Bug Generation 1 --
+----CROSS----
+({'pressure': 4910, 'pdltrip': 1, 'power': 3996}, [0])
+({'pressure': 1281, 'pdltrip': 1, 'power': 4635}, [1])
+# Child 1
+({'pressure': 1281, 'pdltrip': 1, 'power': 4635}, [1])
+# Child 2
+({'pressure': 4910, 'pdltrip': 1, 'power': 3996}, [0])
+----CROSS----
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+({'pressure': 4852, 'pdltrip': 1, 'power': 4062}, [0])
+# Child 1
+({'pressure': 4852, 'pdltrip': 1, 'power': 4062}, [0])
+# Child 2
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+----CROSS----
+({'pressure': 960, 'pdltrip': 1, 'power': 3879}, [1])
+({'pressure': 4852, 'pdltrip': 1, 'power': 4826}, [0])
+# Child 1
+({'pressure': 4852, 'pdltrip': 1, 'power': 4826}, [0])
+# Child 2
+({'pressure': 960, 'pdltrip': 1, 'power': 3879}, [1])
+----CROSS----
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+# Child 1
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+# Child 2
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+----CROSS----
+({'pressure': 4856, 'pdltrip': 1, 'power': 3131}, [0])
+({'pressure': 4907, 'pdltrip': 1, 'power': 3872}, [0])
+# Child 1
+({'pressure': 4907, 'pdltrip': 1, 'power': 3872}, [0])
+# Child 2
+({'pressure': 4856, 'pdltrip': 1, 'power': 3131}, [0])
+----CROSS----
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 598, 'pdltrip': 1, 'power': 4582}, [1])
+# Child 1
+({'pressure': 598, 'pdltrip': 1, 'power': 4582}, [1])
+# Child 2
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 1281, 'pdltrip': 1, 'power': 4635}, [1])
+random rule 1
+found :{'pressure': 174, 'pdltrip': 1, 'power': 2813}
+--updated from statesReached--
+------Mutated------
+({'pressure': 174, 'pdltrip': 1, 'power': 2813}, [1])
+({'pressure': 4852, 'pdltrip': 1, 'power': 4826}, [0])
+random rule 1
+------Mutated------
+({'pressure': 206, 'pdltrip': 1, 'power': 4826}, [1])
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+random rule 1
+------Mutated------
+({'pressure': 374, 'pdltrip': 1, 'power': 4746}, [1])
+({'pressure': 4907, 'pdltrip': 1, 'power': 3872}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4907, 'pdltrip': 1, 'power': 3872}, [0])
+({'pressure': 598, 'pdltrip': 1, 'power': 4582}, [1])
+random rule 1
+------Mutated------
+({'pressure': 598, 'pdltrip': 1, 'power': 4689}, [1])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 1
+------Mutated------
+({'pressure': 760, 'pdltrip': 1, 'power': 4166}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 174), ('pdltrip', 1), ('power', 2813)], [1], 10.175363779067993)
+places =3
+states =5000
+([('pressure', 4910), ('pdltrip', 1), ('power', 3996)], [0], 11.438249349594116)
+([('pressure', 4852), ('pdltrip', 1), ('power', 4062)], [0], 11.83855390548706)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 9.011504173278809)
+places =3
+states =5000
+([('pressure', 206), ('pdltrip', 1), ('power', 4826)], [1], 9.517516851425171)
+places =3
+states =5000
+([('pressure', 960), ('pdltrip', 1), ('power', 3879)], [1], 12.188951015472412)
+places =3
+states =5000
+([('pressure', 374), ('pdltrip', 1), ('power', 4746)], [1], 10.240139722824097)
+places =3
+states =5000
+([('pressure', 4850), ('pdltrip', 1), ('power', 4681)], [0], 11.7036874294281)
+places =3
+states =5000
+([('pressure', 4907), ('pdltrip', 1), ('power', 3872)], [0], 11.68582034111023)
+places =3
+states =5000
+([('pressure', 4856), ('pdltrip', 1), ('power', 3131)], [0], 11.677036046981812)
+([('pressure', 598), ('pdltrip', 1), ('power', 4689)], [1], 10.397165775299072)
+([('pressure', 760), ('pdltrip', 1), ('power', 4166)], [1], 10.654985666275024)
+-- Bug Generation 2 --
+----CROSS----
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+# Child 1
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+# Child 2
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+----CROSS----
+({'pressure': 206, 'pdltrip': 1, 'power': 4826}, [1])
+({'pressure': 174, 'pdltrip': 1, 'power': 2813}, [1])
+# Child 1
+({'pressure': 174, 'pdltrip': 1, 'power': 2813}, [1])
+# Child 2
+({'pressure': 206, 'pdltrip': 1, 'power': 4826}, [1])
+----CROSS----
+({'pressure': 4856, 'pdltrip': 1, 'power': 3131}, [0])
+({'pressure': 374, 'pdltrip': 1, 'power': 4746}, [1])
+# Child 1
+({'pressure': 374, 'pdltrip': 1, 'power': 4746}, [1])
+# Child 2
+({'pressure': 4856, 'pdltrip': 1, 'power': 3131}, [0])
+({'pressure': 4850, 'pdltrip': 1, 'power': 4681}, [0])
+random rule 0
+found :{'pressure': 4937, 'pdltrip': 1, 'power': 4332}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 174, 'pdltrip': 1, 'power': 2813}, [1])
+random rule 0
+found :{'pressure': 4931, 'pdltrip': 1, 'power': 3927}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4931, 'pdltrip': 1, 'power': 3927}, [0])
+({'pressure': 374, 'pdltrip': 1, 'power': 4746}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4910, 'pdltrip': 1, 'power': 3792}, [0])
+({'pressure': 598, 'pdltrip': 1, 'power': 4689}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4931, 'pdltrip': 1, 'power': 4084}, [0])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 174), ('pdltrip', 1), ('power', 2813)], [1], 10.04193115234375)
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.08382773399353)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 11.536666631698608)
+places =3
+states =5000
+([('pressure', 4931), ('pdltrip', 1), ('power', 3927)], [0], 9.823882341384888)
+places =3
+states =5000
+([('pressure', 206), ('pdltrip', 1), ('power', 4826)], [1], 11.839568853378296)
+places =3
+states =5000
+([('pressure', 4910), ('pdltrip', 1), ('power', 3792)], [0], 11.39274549484253)
+([('pressure', 4856), ('pdltrip', 1), ('power', 3131)], [0], 8.352558612823486)
+([('pressure', 4931), ('pdltrip', 1), ('power', 4084)], [0], 9.887130975723267)
+-- Bug Generation 3 --
+----CROSS----
+({'pressure': 4931, 'pdltrip': 1, 'power': 3927}, [0])
+({'pressure': 174, 'pdltrip': 1, 'power': 2813}, [1])
+# Child 1
+({'pressure': 174, 'pdltrip': 1, 'power': 2813}, [1])
+# Child 2
+({'pressure': 4931, 'pdltrip': 1, 'power': 3927}, [0])
+----CROSS----
+({'pressure': 4931, 'pdltrip': 1, 'power': 3927}, [0])
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+# Child 1
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+# Child 2
+({'pressure': 4931, 'pdltrip': 1, 'power': 3927}, [0])
+----CROSS----
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 4852, 'pdltrip': 1, 'power': 4062}, [0])
+# Child 1
+({'pressure': 4852, 'pdltrip': 1, 'power': 4062}, [0])
+# Child 2
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+----CROSS----
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 1
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 2
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 4931, 'pdltrip': 1, 'power': 3927}, [0])
+random rule 1
+------Mutated------
+({'pressure': 547, 'pdltrip': 1, 'power': 4157}, [1])
+({'pressure': 206, 'pdltrip': 1, 'power': 4826}, [1])
+random rule 0
+found :{'pressure': 4987, 'pdltrip': 1, 'power': 4826}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+({'pressure': 4852, 'pdltrip': 1, 'power': 4062}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4964, 'pdltrip': 1, 'power': 3142}, [0])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4962, 'pdltrip': 1, 'power': 3256}, [0])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 547), ('pdltrip', 1), ('power', 4157)], [1], 8.46602177619934)
+places =3
+states =5000
+([('pressure', 174), ('pdltrip', 1), ('power', 2813)], [1], 10.329957246780396)
+([('pressure', 4987), ('pdltrip', 1), ('power', 4826)], [0], 10.500717878341675)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4931), ('pdltrip', 1), ('power', 3927)], [0], 8.986019134521484)
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 11.000967025756836)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4964), ('pdltrip', 1), ('power', 3142)], [0], 11.990188360214233)
+places =3
+states =5000
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.126962661743164)
+([('pressure', 4962), ('pdltrip', 1), ('power', 3256)], [0], 10.457319021224976)
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.070231676101685)
+-- Bug Generation 4 --
+----CROSS----
+({'pressure': 206, 'pdltrip': 1, 'power': 4826}, [1])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 1
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 2
+({'pressure': 206, 'pdltrip': 1, 'power': 4826}, [1])
+----CROSS----
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+({'pressure': 4931, 'pdltrip': 1, 'power': 4084}, [0])
+# Child 1
+({'pressure': 4931, 'pdltrip': 1, 'power': 4084}, [0])
+# Child 2
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+----CROSS----
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+# Child 1
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+# Child 2
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+----CROSS----
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 4910, 'pdltrip': 1, 'power': 3792}, [0])
+# Child 1
+({'pressure': 4910, 'pdltrip': 1, 'power': 3792}, [0])
+# Child 2
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+random rule 1
+------Mutated------
+({'pressure': 913, 'pdltrip': 1, 'power': 3148}, [1])
+({'pressure': 4910, 'pdltrip': 1, 'power': 3792}, [0])
+random rule 1
+------Mutated------
+({'pressure': 392, 'pdltrip': 1, 'power': 2820}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4931), ('pdltrip', 1), ('power', 4084)], [0], 9.816668510437012)
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.428850889205933)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 206), ('pdltrip', 1), ('power', 4826)], [1], 12.09206748008728)
+places =3
+states =5000
+([('pressure', 913), ('pdltrip', 1), ('power', 3148)], [1], 10.400209665298462)
+places =3
+states =5000
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 12.286558628082275)
+([('pressure', 4987), ('pdltrip', 1), ('power', 4826)], [0], 10.723284482955933)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.0603928565979)
+([('pressure', 392), ('pdltrip', 1), ('power', 2820)], [1], 10.602833271026611)
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 10.759352684020996)
+-- Bug Generation 5 --
+----CROSS----
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+# Child 1
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+# Child 2
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+random rule 1
+found :{'pressure': 886, 'pdltrip': 1, 'power': 4545}
+--updated from statesReached--
+------Mutated------
+({'pressure': 886, 'pdltrip': 1, 'power': 4545}, [1])
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+random rule 1
+------Mutated------
+({'pressure': 1272, 'pdltrip': 1, 'power': 4826}, [1])
+({'pressure': 913, 'pdltrip': 1, 'power': 3148}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4892, 'pdltrip': 1, 'power': 2930}, [0])
+({'pressure': 4987, 'pdltrip': 1, 'power': 4826}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4941, 'pdltrip': 1, 'power': 4542}, [0])
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4843, 'pdltrip': 1, 'power': 2750}, [0])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 1
+found :{'pressure': 603, 'pdltrip': 1, 'power': 4647}
+--updated from statesReached--
+------Mutated------
+({'pressure': 603, 'pdltrip': 1, 'power': 4647}, [1])
+({'pressure': 206, 'pdltrip': 1, 'power': 4826}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4917, 'pdltrip': 1, 'power': 4023}, [0])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 886), ('pdltrip', 1), ('power', 4545)], [1], 10.105891942977905)
+places =3
+states =5000
+([('pressure', 1272), ('pdltrip', 1), ('power', 4826)], [1], 12.00630521774292)
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 12.108267307281494)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4892), ('pdltrip', 1), ('power', 2930)], [0], 10.418189287185669)
+places =3
+states =5000
+([('pressure', 4941), ('pdltrip', 1), ('power', 4542)], [0], 10.240329504013062)
+places =3
+states =5000
+([('pressure', 4843), ('pdltrip', 1), ('power', 2750)], [0], 11.809109926223755)
+([('pressure', 603), ('pdltrip', 1), ('power', 4647)], [1], 7.32533073425293)
+([('pressure', 4917), ('pdltrip', 1), ('power', 4023)], [0], 10.078551530838013)
+-- Bug Generation 6 --
+----CROSS----
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+({'pressure': 392, 'pdltrip': 1, 'power': 2820}, [1])
+# Child 1
+({'pressure': 392, 'pdltrip': 1, 'power': 2820}, [1])
+# Child 2
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+----CROSS----
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+({'pressure': 4917, 'pdltrip': 1, 'power': 4023}, [0])
+# Child 1
+({'pressure': 4917, 'pdltrip': 1, 'power': 4023}, [0])
+# Child 2
+({'pressure': 92, 'pdltrip': 1, 'power': 4932}, [1])
+----CROSS----
+({'pressure': 392, 'pdltrip': 1, 'power': 2820}, [1])
+({'pressure': 1272, 'pdltrip': 1, 'power': 4826}, [1])
+# Child 1
+({'pressure': 1272, 'pdltrip': 1, 'power': 4826}, [1])
+# Child 2
+({'pressure': 392, 'pdltrip': 1, 'power': 2820}, [1])
+----CROSS----
+({'pressure': 4892, 'pdltrip': 1, 'power': 2930}, [0])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 1
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 2
+({'pressure': 4892, 'pdltrip': 1, 'power': 2930}, [0])
+----CROSS----
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 4892, 'pdltrip': 1, 'power': 2930}, [0])
+# Child 1
+({'pressure': 4892, 'pdltrip': 1, 'power': 2930}, [0])
+# Child 2
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 392, 'pdltrip': 1, 'power': 2820}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4816, 'pdltrip': 1, 'power': 3578}, [0])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 1
+------Mutated------
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 4892, 'pdltrip': 1, 'power': 2930}, [0])
+random rule 1
+------Mutated------
+({'pressure': 1091, 'pdltrip': 1, 'power': 3909}, [1])
+({'pressure': 4892, 'pdltrip': 1, 'power': 2930}, [0])
+random rule 1
+------Mutated------
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 9.025457859039307)
+places =3
+states =5000
+([('pressure', 4917), ('pdltrip', 1), ('power', 4023)], [0], 10.405582666397095)
+([('pressure', 4816), ('pdltrip', 1), ('power', 3578)], [0], 10.9169762134552)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 92), ('pdltrip', 1), ('power', 4932)], [1], 11.380107402801514)
+places =3
+states =5000
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 11.798213243484497)
+([('pressure', 1272), ('pdltrip', 1), ('power', 4826)], [1], 11.655454397201538)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 392), ('pdltrip', 1), ('power', 2820)], [1], 10.560963869094849)
+places =3
+states =5000
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.105726957321167)
+places =3
+states =5000
+([('pressure', 1091), ('pdltrip', 1), ('power', 3909)], [1], 11.19417405128479)
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 8.631696939468384)
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 9.351753234863281)
+-- Bug Generation 7 --
+----CROSS----
+({'pressure': 1091, 'pdltrip': 1, 'power': 3909}, [1])
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 1
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 2
+({'pressure': 1091, 'pdltrip': 1, 'power': 3909}, [1])
+----CROSS----
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+({'pressure': 1272, 'pdltrip': 1, 'power': 4826}, [1])
+# Child 1
+({'pressure': 1272, 'pdltrip': 1, 'power': 4826}, [1])
+# Child 2
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+----CROSS----
+({'pressure': 4816, 'pdltrip': 1, 'power': 3578}, [0])
+({'pressure': 1091, 'pdltrip': 1, 'power': 3909}, [1])
+# Child 1
+({'pressure': 1091, 'pdltrip': 1, 'power': 3909}, [1])
+# Child 2
+({'pressure': 4816, 'pdltrip': 1, 'power': 3578}, [0])
+----CROSS----
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+# Child 1
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+# Child 2
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+----CROSS----
+({'pressure': 603, 'pdltrip': 1, 'power': 4647}, [1])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 1
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 2
+({'pressure': 603, 'pdltrip': 1, 'power': 4647}, [1])
+({'pressure': 603, 'pdltrip': 1, 'power': 4647}, [1])
+random rule 1
+------Mutated------
+({'pressure': 603, 'pdltrip': 1, 'power': 4647}, [1])
+({'pressure': 1091, 'pdltrip': 1, 'power': 3909}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4859, 'pdltrip': 1, 'power': 2977}, [0])
+({'pressure': 1272, 'pdltrip': 1, 'power': 4826}, [1])
+random rule 0
+found :{'pressure': 4904, 'pdltrip': 1, 'power': 4583}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4904, 'pdltrip': 1, 'power': 4583}, [0])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 1
+------Mutated------
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 603, 'pdltrip': 1, 'power': 4647}, [1])
+random rule 1
+------Mutated------
+({'pressure': 603, 'pdltrip': 1, 'power': 2794}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 10.532052993774414)
+([('pressure', 603), ('pdltrip', 1), ('power', 4647)], [1], 10.682582378387451)
+([('pressure', 4859), ('pdltrip', 1), ('power', 2977)], [0], 10.729148864746094)
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4904), ('pdltrip', 1), ('power', 4583)], [0], 10.379186153411865)
+places =3
+states =5000
+([('pressure', 1091), ('pdltrip', 1), ('power', 3909)], [1], 11.812439680099487)
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 12.290205717086792)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4816), ('pdltrip', 1), ('power', 3578)], [0], 11.89297866821289)
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 10.700603485107422)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 12.304748296737671)
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 8.090375423431396)
+([('pressure', 603), ('pdltrip', 1), ('power', 2794)], [1], 9.996317386627197)
+-- Bug Generation 8 --
+----CROSS----
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 1
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 2
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+----CROSS----
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 1
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 2
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+----CROSS----
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 1
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 2
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+----CROSS----
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 1
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+# Child 2
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+----CROSS----
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+# Child 1
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+# Child 2
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+random rule 1
+------Mutated------
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 1
+found :{'pressure': 1141, 'pdltrip': 1, 'power': 4245}
+--updated from statesReached--
+------Mutated------
+({'pressure': 1141, 'pdltrip': 1, 'power': 4245}, [1])
+({'pressure': 4859, 'pdltrip': 1, 'power': 2977}, [0])
+random rule 1
+------Mutated------
+({'pressure': 887, 'pdltrip': 1, 'power': 3709}, [1])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+random rule 1
+------Mutated------
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+random rule 1
+found :{'pressure': 865, 'pdltrip': 1, 'power': 3014}
+--updated from statesReached--
+------Mutated------
+({'pressure': 865, 'pdltrip': 1, 'power': 3014}, [1])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+random rule 1
+------Mutated------
+({'pressure': 359, 'pdltrip': 1, 'power': 3834}, [1])
+({'pressure': 603, 'pdltrip': 1, 'power': 2794}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+({'pressure': 4937, 'pdltrip': 1, 'power': 4332}, [0])
+random rule 1
+------Mutated------
+({'pressure': 373, 'pdltrip': 1, 'power': 3043}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.57050085067749)
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 10.822530031204224)
+places =3
+states =5000
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 11.377192497253418)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 1141), ('pdltrip', 1), ('power', 4245)], [1], 10.106778860092163)
+places =3
+states =5000
+([('pressure', 887), ('pdltrip', 1), ('power', 3709)], [1], 11.116398572921753)
+([('pressure', 1090), ('pdltrip', 1), ('power', 3831)], [1], 10.776237726211548)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 9.870310306549072)
+places =3
+states =5000
+([('pressure', 865), ('pdltrip', 1), ('power', 3014)], [1], 9.814161539077759)
+places =3
+states =5000
+([('pressure', 4937), ('pdltrip', 1), ('power', 4332)], [0], 10.885815858840942)
+places =3
+states =5000
+([('pressure', 477), ('pdltrip', 1), ('power', 4166)], [1], 11.320010423660278)
+places =3
+states =5000
+([('pressure', 4991), ('pdltrip', 1), ('power', 4334)], [0], 10.544984340667725)
+([('pressure', 359), ('pdltrip', 1), ('power', 3834)], [1], 11.546464443206787)
+([('pressure', 373), ('pdltrip', 1), ('power', 3043)], [1], 7.791383981704712)
+-- Bug Generation 9 --
+----CROSS----
+({'pressure': 865, 'pdltrip': 1, 'power': 3014}, [1])
+({'pressure': 865, 'pdltrip': 1, 'power': 3014}, [1])
+# Child 1
+({'pressure': 865, 'pdltrip': 1, 'power': 3014}, [1])
+# Child 2
+({'pressure': 865, 'pdltrip': 1, 'power': 3014}, [1])
+----CROSS----
+({'pressure': 887, 'pdltrip': 1, 'power': 3709}, [1])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 1
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 2
+({'pressure': 887, 'pdltrip': 1, 'power': 3709}, [1])
+----CROSS----
+({'pressure': 359, 'pdltrip': 1, 'power': 3834}, [1])
+({'pressure': 1141, 'pdltrip': 1, 'power': 4245}, [1])
+# Child 1
+({'pressure': 1141, 'pdltrip': 1, 'power': 4245}, [1])
+# Child 2
+({'pressure': 359, 'pdltrip': 1, 'power': 3834}, [1])
+----CROSS----
+({'pressure': 373, 'pdltrip': 1, 'power': 3043}, [1])
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 1
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 2
+({'pressure': 373, 'pdltrip': 1, 'power': 3043}, [1])
+({'pressure': 865, 'pdltrip': 1, 'power': 3014}, [1])
+random rule 0
+found :{'pressure': 4932, 'pdltrip': 1, 'power': 3924}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4932, 'pdltrip': 1, 'power': 3924}, [0])
+({'pressure': 359, 'pdltrip': 1, 'power': 3834}, [1])
+random rule 1
+------Mutated------
+({'pressure': 359, 'pdltrip': 1, 'power': 3834}, [1])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4811, 'pdltrip': 1, 'power': 3630}, [0])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 1090), ('pdltrip', 1), ('power', 3831)], [1], 9.818180322647095)
+places =3
+states =5000
+([('pressure', 4932), ('pdltrip', 1), ('power', 3924)], [0], 10.645962238311768)
+([('pressure', 865), ('pdltrip', 1), ('power', 3014)], [1], 10.722260236740112)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 1141), ('pdltrip', 1), ('power', 4245)], [1], 9.956117630004883)
+places =3
+states =5000
+([('pressure', 887), ('pdltrip', 1), ('power', 3709)], [1], 11.912829637527466)
+([('pressure', 359), ('pdltrip', 1), ('power', 3834)], [1], 11.68638801574707)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 373), ('pdltrip', 1), ('power', 3043)], [1], 10.347322940826416)
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 12.128120422363281)
+([('pressure', 4811), ('pdltrip', 1), ('power', 3630)], [0], 11.754688501358032)
+-- Bug Generation 10 --
+----CROSS----
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 1
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 2
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+----CROSS----
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+# Child 1
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+# Child 2
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+----CROSS----
+({'pressure': 373, 'pdltrip': 1, 'power': 3043}, [1])
+({'pressure': 4932, 'pdltrip': 1, 'power': 3924}, [0])
+# Child 1
+({'pressure': 4932, 'pdltrip': 1, 'power': 3924}, [0])
+# Child 2
+({'pressure': 373, 'pdltrip': 1, 'power': 3043}, [1])
+----CROSS----
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+({'pressure': 4811, 'pdltrip': 1, 'power': 3630}, [0])
+# Child 1
+({'pressure': 4811, 'pdltrip': 1, 'power': 3630}, [0])
+# Child 2
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+----CROSS----
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 1
+({'pressure': 482, 'pdltrip': 1, 'power': 3366}, [1])
+# Child 2
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+random rule 1
+------Mutated------
+({'pressure': 38, 'pdltrip': 1, 'power': 3703}, [1])
+({'pressure': 887, 'pdltrip': 1, 'power': 3709}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4954, 'pdltrip': 1, 'power': 4080}, [0])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+random rule 1
+------Mutated------
+({'pressure': 1090, 'pdltrip': 1, 'power': 4988}, [1])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 1
+found :{'pressure': 649, 'pdltrip': 1, 'power': 4586}
+--updated from statesReached--
+------Mutated------
+({'pressure': 649, 'pdltrip': 1, 'power': 4586}, [1])
+({'pressure': 4932, 'pdltrip': 1, 'power': 3924}, [0])
+random rule 1
+------Mutated------
+({'pressure': 820, 'pdltrip': 1, 'power': 3924}, [1])
+({'pressure': 373, 'pdltrip': 1, 'power': 3043}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+({'pressure': 477, 'pdltrip': 1, 'power': 4166}, [1])
+random rule 1
+found :{'pressure': 558, 'pdltrip': 1, 'power': 2749}
+--updated from statesReached--
+------Mutated------
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 38), ('pdltrip', 1), ('power', 3703)], [1], 9.090559482574463)
+places =3
+states =5000
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 10.067420959472656)
+places =3
+states =5000
+([('pressure', 1090), ('pdltrip', 1), ('power', 3831)], [1], 11.81298565864563)
+places =3
+states =5000
+([('pressure', 4954), ('pdltrip', 1), ('power', 4080)], [0], 9.344455480575562)
+places =3
+states =5000
+([('pressure', 4991), ('pdltrip', 1), ('power', 4334)], [0], 9.190239906311035)
+([('pressure', 1090), ('pdltrip', 1), ('power', 4988)], [1], 11.68526291847229)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 649), ('pdltrip', 1), ('power', 4586)], [1], 10.59444284439087)
+([('pressure', 820), ('pdltrip', 1), ('power', 3924)], [1], 8.751671075820923)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4958), ('pdltrip', 1), ('power', 2991)], [0], 10.546688318252563)
+places =3
+states =5000
+([('pressure', 4811), ('pdltrip', 1), ('power', 3630)], [0], 12.407719373703003)
+([('pressure', 1090), ('pdltrip', 1), ('power', 3831)], [1], 12.074332475662231)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 482), ('pdltrip', 1), ('power', 3366)], [1], 10.514914751052856)
+([('pressure', 4991), ('pdltrip', 1), ('power', 4334)], [0], 9.106606721878052)
+([('pressure', 558), ('pdltrip', 1), ('power', 2749)], [1], 8.987854719161987)
+-- Bug Generation 11 --
+----CROSS----
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+({'pressure': 4811, 'pdltrip': 1, 'power': 3630}, [0])
+# Child 1
+({'pressure': 4811, 'pdltrip': 1, 'power': 3630}, [0])
+# Child 2
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+----CROSS----
+({'pressure': 4954, 'pdltrip': 1, 'power': 4080}, [0])
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 1
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 2
+({'pressure': 4954, 'pdltrip': 1, 'power': 4080}, [0])
+----CROSS----
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 1
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 2
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+({'pressure': 4811, 'pdltrip': 1, 'power': 3630}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4811, 'pdltrip': 1, 'power': 4655}, [0])
+({'pressure': 4954, 'pdltrip': 1, 'power': 4080}, [0])
+random rule 1
+------Mutated------
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+({'pressure': 4954, 'pdltrip': 1, 'power': 4080}, [0])
+random rule 1
+------Mutated------
+({'pressure': 623, 'pdltrip': 1, 'power': 3304}, [1])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+random rule 1
+------Mutated------
+({'pressure': 542, 'pdltrip': 1, 'power': 4933}, [1])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+random rule 0
+found :{'pressure': 4951, 'pdltrip': 1, 'power': 4785}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4951, 'pdltrip': 1, 'power': 4785}, [0])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+random rule 1
+------Mutated------
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4991), ('pdltrip', 1), ('power', 4334)], [0], 10.535518169403076)
+([('pressure', 4811), ('pdltrip', 1), ('power', 4655)], [0], 10.551791906356812)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 11.545154809951782)
+places =3
+states =5000
+([('pressure', 623), ('pdltrip', 1), ('power', 3304)], [1], 9.495325565338135)
+([('pressure', 542), ('pdltrip', 1), ('power', 4933)], [1], 8.879329442977905)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4958), ('pdltrip', 1), ('power', 2991)], [0], 10.959907293319702)
+([('pressure', 4951), ('pdltrip', 1), ('power', 4785)], [0], 8.927386045455933)
+([('pressure', 1090), ('pdltrip', 1), ('power', 3831)], [1], 10.924136877059937)
+-- Bug Generation 12 --
+----CROSS----
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 1
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+# Child 2
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+----CROSS----
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+({'pressure': 623, 'pdltrip': 1, 'power': 3304}, [1])
+# Child 1
+({'pressure': 623, 'pdltrip': 1, 'power': 3304}, [1])
+# Child 2
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+({'pressure': 1090, 'pdltrip': 1, 'power': 3831}, [1])
+random rule 1
+found :{'pressure': 901, 'pdltrip': 1, 'power': 3930}
+--updated from statesReached--
+------Mutated------
+({'pressure': 901, 'pdltrip': 1, 'power': 3930}, [1])
+({'pressure': 4991, 'pdltrip': 1, 'power': 4334}, [0])
+random rule 0
+found :{'pressure': 4816, 'pdltrip': 1, 'power': 2989}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4816, 'pdltrip': 1, 'power': 2989}, [0])
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+random rule 1
+found :{'pressure': 659, 'pdltrip': 1, 'power': 3033}
+--updated from statesReached--
+------Mutated------
+({'pressure': 659, 'pdltrip': 1, 'power': 3033}, [1])
+({'pressure': 649, 'pdltrip': 1, 'power': 4586}, [1])
+random rule 0
+found :{'pressure': 4959, 'pdltrip': 1, 'power': 4162}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4959, 'pdltrip': 1, 'power': 4162}, [0])
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+random rule 1
+------Mutated------
+({'pressure': 901, 'pdltrip': 1, 'power': 4662}, [1])
+({'pressure': 542, 'pdltrip': 1, 'power': 4933}, [1])
+random rule 1
+found :{'pressure': 613, 'pdltrip': 1, 'power': 4705}
+--updated from statesReached--
+------Mutated------
+({'pressure': 613, 'pdltrip': 1, 'power': 4705}, [1])
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+random rule 1
+------Mutated------
+({'pressure': 719, 'pdltrip': 1, 'power': 2964}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4816), ('pdltrip', 1), ('power', 2989)], [0], 9.51056957244873)
+([('pressure', 558), ('pdltrip', 1), ('power', 2749)], [1], 10.078238725662231)
+([('pressure', 901), ('pdltrip', 1), ('power', 3930)], [1], 10.225045442581177)
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4959), ('pdltrip', 1), ('power', 4162)], [0], 9.75322675704956)
+([('pressure', 659), ('pdltrip', 1), ('power', 3033)], [1], 10.570508003234863)
+places =3
+states =5000
+([('pressure', 623), ('pdltrip', 1), ('power', 3304)], [1], 11.634352684020996)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 613), ('pdltrip', 1), ('power', 4705)], [1], 9.648670673370361)
+([('pressure', 901), ('pdltrip', 1), ('power', 4662)], [1], 11.506259202957153)
+([('pressure', 719), ('pdltrip', 1), ('power', 2964)], [1], 10.59336805343628)
+-- Bug Generation 13 --
+----CROSS----
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+# Child 1
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+# Child 2
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+----CROSS----
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+({'pressure': 659, 'pdltrip': 1, 'power': 3033}, [1])
+# Child 1
+({'pressure': 659, 'pdltrip': 1, 'power': 3033}, [1])
+# Child 2
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+----CROSS----
+({'pressure': 4959, 'pdltrip': 1, 'power': 4162}, [0])
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+# Child 1
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+# Child 2
+({'pressure': 4959, 'pdltrip': 1, 'power': 4162}, [0])
+----CROSS----
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+({'pressure': 649, 'pdltrip': 1, 'power': 4586}, [1])
+# Child 1
+({'pressure': 649, 'pdltrip': 1, 'power': 4586}, [1])
+# Child 2
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+----CROSS----
+({'pressure': 623, 'pdltrip': 1, 'power': 3304}, [1])
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 1
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 2
+({'pressure': 623, 'pdltrip': 1, 'power': 3304}, [1])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+random rule 1
+------Mutated------
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+({'pressure': 901, 'pdltrip': 1, 'power': 3930}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4988, 'pdltrip': 1, 'power': 4160}, [0])
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4940, 'pdltrip': 1, 'power': 2867}, [0])
+({'pressure': 4959, 'pdltrip': 1, 'power': 4162}, [0])
+random rule 1
+found :{'pressure': 83, 'pdltrip': 1, 'power': 4332}
+--updated from statesReached--
+------Mutated------
+({'pressure': 83, 'pdltrip': 1, 'power': 4332}, [1])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 9.12327766418457)
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 4417)], [0], 10.75207805633545)
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 11.250943660736084)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 6.274050235748291)
+places =3
+states =5000
+===========================
+FOUND
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], (6.274050235748291, 32))
+[1]
+===========================
+([('pressure', 659), ('pdltrip', 1), ('power', 3033)], [1], 9.51069712638855)
+places =3
+states =5000
+([('pressure', 4988), ('pdltrip', 1), ('power', 4160)], [0], 12.019288539886475)
+places =3
+states =5000
+([('pressure', 4940), ('pdltrip', 1), ('power', 2867)], [0], 10.092496633529663)
+places =3
+states =5000
+([('pressure', 4959), ('pdltrip', 1), ('power', 4162)], [0], 9.301622152328491)
+places =3
+states =5000
+([('pressure', 649), ('pdltrip', 1), ('power', 4586)], [1], 9.943558692932129)
+places =3
+states =5000
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 10.38698935508728)
+([('pressure', 4958), ('pdltrip', 1), ('power', 2991)], [0], 9.073197603225708)
+places =3
+states =5000
+([('pressure', 623), ('pdltrip', 1), ('power', 3304)], [1], 11.269503831863403)
+([('pressure', 83), ('pdltrip', 1), ('power', 4332)], [1], 8.723092555999756)
+-- Bug Generation 14 --
+----CROSS----
+({'pressure': 623, 'pdltrip': 1, 'power': 3304}, [1])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+# Child 1
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+# Child 2
+({'pressure': 623, 'pdltrip': 1, 'power': 3304}, [1])
+----CROSS----
+({'pressure': 4988, 'pdltrip': 1, 'power': 4160}, [0])
+({'pressure': 649, 'pdltrip': 1, 'power': 4586}, [1])
+# Child 1
+({'pressure': 649, 'pdltrip': 1, 'power': 4586}, [1])
+# Child 2
+({'pressure': 4988, 'pdltrip': 1, 'power': 4160}, [0])
+----CROSS----
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 1
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 2
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+----CROSS----
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+# Child 1
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+# Child 2
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+----CROSS----
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 1
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 2
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+----CROSS----
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 1
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 2
+({'pressure': 558, 'pdltrip': 1, 'power': 2749}, [1])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4993, 'pdltrip': 1, 'power': 3419}, [0])
+({'pressure': 649, 'pdltrip': 1, 'power': 4586}, [1])
+random rule 0
+found :{'pressure': 4930, 'pdltrip': 1, 'power': 4489}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4930, 'pdltrip': 1, 'power': 4489}, [0])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+random rule 0
+found :{'pressure': 4961, 'pdltrip': 1, 'power': 3367}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4961, 'pdltrip': 1, 'power': 3367}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4926, 'pdltrip': 1, 'power': 3559}, [0])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+random rule 0
+found :{'pressure': 4880, 'pdltrip': 1, 'power': 3260}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4880, 'pdltrip': 1, 'power': 3260}, [0])
+({'pressure': 4988, 'pdltrip': 1, 'power': 4160}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4874, 'pdltrip': 1, 'power': 2897}, [0])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 9.820697546005249)
+places =3
+states =5000
+([('pressure', 4993), ('pdltrip', 1), ('power', 3419)], [0], 11.245936393737793)
+([('pressure', 623), ('pdltrip', 1), ('power', 3304)], [1], 12.014562606811523)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4930), ('pdltrip', 1), ('power', 4489)], [0], 10.260673999786377)
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 4417)], [0], 10.643013954162598)
+([('pressure', 4988), ('pdltrip', 1), ('power', 4160)], [0], 11.637217998504639)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4961), ('pdltrip', 1), ('power', 3367)], [0], 9.614967107772827)
+places =3
+states =5000
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 11.262155055999756)
+places =3
+states =5000
+([('pressure', 136), ('pdltrip', 1), ('power', 4791)], [1], 12.224265813827515)
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 3559)], [0], 11.62404489517212)
+places =3
+states =5000
+([('pressure', 4880), ('pdltrip', 1), ('power', 3260)], [0], 9.633652687072754)
+places =3
+states =5000
+([('pressure', 4958), ('pdltrip', 1), ('power', 2991)], [0], 9.573193311691284)
+([('pressure', 558), ('pdltrip', 1), ('power', 2749)], [1], 9.519596815109253)
+([('pressure', 4874), ('pdltrip', 1), ('power', 2897)], [0], 8.572828769683838)
+-- Bug Generation 15 --
+----CROSS----
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 1
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+# Child 2
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+----CROSS----
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 1
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 2
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4883, 'pdltrip': 1, 'power': 4139}, [0])
+({'pressure': 4930, 'pdltrip': 1, 'power': 4489}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4962, 'pdltrip': 1, 'power': 3836}, [0])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4830, 'pdltrip': 1, 'power': 3425}, [0])
+({'pressure': 136, 'pdltrip': 1, 'power': 4791}, [1])
+random rule 0
+------Mutated------
+({'pressure': 4847, 'pdltrip': 1, 'power': 4025}, [0])
+({'pressure': 4993, 'pdltrip': 1, 'power': 3419}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4921, 'pdltrip': 1, 'power': 3358}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 3559}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4865, 'pdltrip': 1, 'power': 3387}, [0])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 4417)], [0], 9.551252126693726)
+places =3
+states =5000
+([('pressure', 4958), ('pdltrip', 1), ('power', 2991)], [0], 10.31246018409729)
+([('pressure', 4883), ('pdltrip', 1), ('power', 4139)], [0], 10.666844844818115)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 4417)], [0], 9.658490419387817)
+places =3
+states =5000
+([('pressure', 4830), ('pdltrip', 1), ('power', 3425)], [0], 10.180492401123047)
+places =3
+states =5000
+([('pressure', 4962), ('pdltrip', 1), ('power', 3836)], [0], 11.314749956130981)
+places =3
+states =5000
+([('pressure', 4847), ('pdltrip', 1), ('power', 4025)], [0], 9.814821720123291)
+([('pressure', 4921), ('pdltrip', 1), ('power', 3358)], [0], 10.754312992095947)
+([('pressure', 4865), ('pdltrip', 1), ('power', 3387)], [0], 10.516176223754883)
+-- Bug Generation 16 --
+----CROSS----
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 3559}, [0])
+# Child 1
+({'pressure': 4926, 'pdltrip': 1, 'power': 3559}, [0])
+# Child 2
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+----CROSS----
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 1
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+# Child 2
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+random rule 1
+------Mutated------
+({'pressure': 1266, 'pdltrip': 1, 'power': 3200}, [1])
+({'pressure': 4880, 'pdltrip': 1, 'power': 3260}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4880, 'pdltrip': 1, 'power': 4047}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 3559}, [0])
+random rule 0
+found :{'pressure': 4928, 'pdltrip': 1, 'power': 2869}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4928, 'pdltrip': 1, 'power': 2869}, [0])
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4926, 'pdltrip': 1, 'power': 4417}, [0])
+({'pressure': 4958, 'pdltrip': 1, 'power': 2991}, [0])
+random rule 0
+found :{'pressure': 4870, 'pdltrip': 1, 'power': 3722}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4870, 'pdltrip': 1, 'power': 3722}, [0])
+({'pressure': 4847, 'pdltrip': 1, 'power': 4025}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4929, 'pdltrip': 1, 'power': 4866}, [0])
+({'pressure': 4880, 'pdltrip': 1, 'power': 3260}, [0])
+random rule 0
+found :{'pressure': 4827, 'pdltrip': 1, 'power': 3909}
+--updated from statesReached--
+------Mutated------
+({'pressure': 4827, 'pdltrip': 1, 'power': 3909}, [0])
+({'pressure': 4830, 'pdltrip': 1, 'power': 3425}, [0])
+random rule 0
+------Mutated------
+({'pressure': 4811, 'pdltrip': 1, 'power': 3683}, [0])
+places =3
+states =5000
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 1266), ('pdltrip', 1), ('power', 3200)], [1], 9.834709405899048)
+([('pressure', 4926), ('pdltrip', 1), ('power', 4417)], [0], 10.211634397506714)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 3559)], [0], 11.10297679901123)
+places =3
+states =5000
+([('pressure', 4880), ('pdltrip', 1), ('power', 4047)], [0], 10.523588418960571)
+([('pressure', 4928), ('pdltrip', 1), ('power', 2869)], [0], 10.216866493225098)
+places =3
+states =5000
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 4417)], [0], 10.652086973190308)
+places =3
+states =5000
+([('pressure', 4926), ('pdltrip', 1), ('power', 4417)], [0], 10.016015529632568)
+([('pressure', 4870), ('pdltrip', 1), ('power', 3722)], [0], 10.266037464141846)
+places =3
+states =5000
+([('pressure', 4929), ('pdltrip', 1), ('power', 4866)], [0], 9.660412788391113)
+places =3
+states =5000
+places =3
+states =5000
+===========================
+FOUND
+([('pressure', 4929), ('pdltrip', 1), ('power', 4866)], (9.660412788391113, 57))
+[0]
+===========================
+([('pressure', 4827), ('pdltrip', 1), ('power', 3909)], [0], 8.866955757141113)
+([('pressure', 4811), ('pdltrip', 1), ('power', 3683)], [0], 9.141047954559326)
+-- End of (successful) evolution --
