@@ -55,7 +55,7 @@ There are several game objects in this game which are described as follows:
 * Lava : which is called big damage area in the game. This game object acts as a dangerous area that kills the player when he falls into it.
 
 
-Note: Petri nets model creation code that was implemented by the authors of this repositry and which was used in the experiments can be found in the following [link](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentA%26D-Platformer/Platformer_CPN.py).
+Note: Petri nets model creation code that was implemented by the authors of this repository and which was used in the experiments can be found in the following [link](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentA%26D-Platformer/Platformer_CPN.py).
 
 ## Game Rules
 The following set of requirements and rules were manually created by the authors to serve the purpose of the study, where rules were constructed using the proposed CPN-MCL rules scheme.
