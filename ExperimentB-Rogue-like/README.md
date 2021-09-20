@@ -22,6 +22,8 @@ The game consists of several game objects that are described as follows:
 * Exit point: the objective of the game is that the player has to go to the exit point in each level to be able to proceed through levels.
 
 
+Note: Petri nets model creation code that was implemented by the authors of this repository and which was used in the experiments can be found in the following [link](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentB-Rogue-like/RogueLike_CPN.py).
+
 ## Game Rules
 The following set of requirements and rules were manually created by the authors to serve the purpose of the study, where rules were constructed using the proposed CPN-MCL rules scheme.
 
