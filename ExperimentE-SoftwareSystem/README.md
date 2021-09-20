@@ -18,6 +18,10 @@ in addition, the system consists of two rules which were discussed by [Cho et. a
 
 This system was selected to further test and push the applicability of the proposed approach. Also, to verify that the proposed approach can be applied to systems other than games.
 
+
+Note: Petri nets model creation code that was implemented by the authors of this repositry and which was used in the experiments can be found in the following [link](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentE-SoftwareSystem/Software_CPN.py).
+
+
 ## Rules
 The following set of requirements and rules were manually created by the authors to serve the purpose of the study, 
 where rules were constructed using the proposed CPN-MCL rules scheme.
