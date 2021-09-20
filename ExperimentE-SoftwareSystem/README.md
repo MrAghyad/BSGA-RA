@@ -1,4 +1,13 @@
 # Software System
+<div align="center">
+	<br>
+	<img src="https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentE-SoftwareSystem/softwareCPN.png?raw=true">
+	<br>
+	<em>
+	Figure: Platformer Game
+	</em>
+</div>
+<br/>
 
 A shutdown system for a [Korean nuclear power plant](https://ieeexplore.ieee.org/abstract/document/566752). This system checks the state of a nuclear reactor such as power and pressure, in addition, 
 it creates a shutdown/trip signal if there is unsafe  situation, such as, very high or low levels of pressure. 
