@@ -4,7 +4,7 @@
 	<img src="https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentE-SoftwareSystem/softwareCPN.png?raw=true">
 	<br>
 	<em>
-	Figure: Platformer Game
+	Figure: Software System Petri Nets
 	</em>
 </div>
 <br/>
