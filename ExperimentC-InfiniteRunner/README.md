@@ -14,6 +14,8 @@ This game is an [open-source 2D infinite runner game](https://github.com/alexFio
 
 The colored Petri nets model of this game consists of 37 places and 21 transitions. Moreover, for this game we defined 4 game rules, which were created using our scheme.
 
+Note: Petri nets model creation code that was implemented by the authors of this repository and which was used in the experiments can be found in the following [link](https://github.com/MrAghyad/BSGA-RA/blob/main/ExperimentC-InfiniteRunner/InfiniteRunner_CPN.py).
+
 ## Game Rules
 
 |Index| Requirement | Rule |
